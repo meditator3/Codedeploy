@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /usr/share/nginx/html/
+   - source: /index.html
+    destination: /var/www/html/
 permissions:
   
 hooks:
@@ -16,5 +16,5 @@ hooks:
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 300
-      runas: ec2-user
+      runas: root
 
